@@ -1,39 +1,11 @@
 package automation_test.mortgage_calculator;
-
-import command_providers.ActOn;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import page_objects.Home;
 import page_objects.NavigationBar;
-import utilities.ScreenCapture;
 
 
 
-public class CalculateRealAprRate{
 
-    WebDriver driver ;
-
-
-    @BeforeMethod
-
-    public void openBrowser() {
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
-        ActOn.browser(driver).openBrowser("https://www.mortgagecalculator.org");
-
-
-
-    }
+public class CalculateRealAprRate extends BaseClass{
 
     @Test
     public void calculateRealApr() {
@@ -50,11 +22,4 @@ public class CalculateRealAprRate{
 
 
     }
-
-    @AfterMethod
-    public void closeBrowser() {
-       ActOn.browser(driver).closeBrowser();
-
-    }
-
 }

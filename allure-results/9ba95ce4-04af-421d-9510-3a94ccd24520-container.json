@@ -1,0 +1,1 @@
+{"uuid":"9ba95ce4-04af-421d-9510-3a94ccd24520","name":"api_test.GetTestWithPathVariables","children":["3c5aaed5-5304-49f2-a6ee-b47a87594afc"],"befores":[{"name":"addThread","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1683263360874,"stop":1683263360874}],"afters":[],"start":1683263360827,"stop":1683263363321}
